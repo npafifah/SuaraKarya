@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Karya | Suara & Karya</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+    }
+    header {
+      background: #003566;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    nav {
+      background: #00264d;
+      text-align: center;
+      padding: 0.6rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .filter-buttons button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background: #ffd60a;
+      color: black;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #003566;
+    }
+    .card small {
+      color: #888;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    footer {
+      background: #00264d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Suara & Karya</h1>
+  <p>Galeri Karya Anak Muda Indonesia</p>
+</header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="aspirasi.html">Aspirasi</a>
+  <a href="karya.html">Karya</a>
+  <a href="unggah.html">Unggah</a>
+  <a href="tentang.html">Tentang</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<div class="container">
+  <h2 style="text-align:center;">Galeri Karya Kreatif</h2>
+
+  <div class="filter-buttons">
+    <button onclick="filterKarya('semua')">Semua</button>
+    <button onclick="filterKarya('puisi')">Puisi</button>
+    <button onclick="filterKarya('musik')">Musik</button>
+    <button onclick="filterKarya('poster')">Poster</button>
+    <button onclick="filterKarya('coding')">Coding</button>
+  </div>
+
+  <div class="gallery-grid" id="karyaContainer">
+    <div class="card" data-kategori="puisi">
+      <h3>Langit Senja</h3>
+      <small>Puisi • oleh Fira</small>
+      <p>“Kala senja turun, kutitipkan rindu pada awan, agar terbang sampai hatimu.”</p>
+    </div>
+    <div class="card" data-kategori="poster">
+      <h3>Poster: Save Trees</h3>
+      <small>Poster • oleh Arya</small>
+      <p>Desain kampanye lingkungan tentang pentingnya menjaga hutan tropis Indonesia.</p>
+    </div>
+    <div class="card" data-kategori="musik">
+      <h3>Melodi Rindu</h3>
+      <small>Musik • oleh Anya</small>
+      <p>Lagu instrumental pendek bertema kenangan masa kecil di desa.</p>
+    </div>
+    <div class="card" data-kategori="coding">
+      <h3>Website Edukasi Bencana</h3>
+      <small>Coding • oleh Reza</small>
+      <p>Web statis edukatif tentang cara evakuasi mandiri saat gempa bumi dan banjir.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Suara & Karya. Ekspresi muda, dampak nyata.</p>
+</footer>
+
+<script>
+function filterKarya(kategori) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    const jenis = card.getAttribute("data-kategori");
+    if (kategori === "semua" || jenis === kategori) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
