@@ -1,135 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suara & Karya – Aspirasi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0; padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background: #4a90e2;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        nav {
-            background: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        nav a {
-            text-decoration: none;
-            color: #4a90e2;
-            font-weight: 600;
-        }
-        .container {
-            padding: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        .filters button {
-            background: white;
-            border: 1px solid #4a90e2;
-            color: #4a90e2;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .filters button:hover {
-            background: #4a90e2;
-            color: white;
-        }
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            margin-bottom: 1.5rem;
-        }
-        .card h3 {
-            color: #4a90e2;
-            margin-bottom: 0.5rem;
-        }
-        .card span {
-            font-size: 0.85rem;
-            color: #999;
-        }
-        .card p {
-            margin-top: 0.5rem;
-            line-height: 1.5;
-        }
-        footer {
-            background: #ffffff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aspirasi Publik | Suara & Karya</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #003566;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #00264d;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .filter-buttons {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .filter-buttons button {
+      margin: 0.3rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      background: #ffc300;
+      color: black;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #003566;
+    }
+    .card small {
+      color: gray;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+      background: #00264d;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Suara & Karya</h1>
-        <p>Ruang Aspirasi dan Ekspresi Anak Muda</p>
-    </header>
-    <nav>
-        <a href="index.html">Beranda</a>
-        <a href="aspirasi.html">Aspirasi</a>
-        <a href="karya.html">Karya</a>
-        <a href="unggah.html">Unggah</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-    <div class="container">
-        <h2 style="margin-bottom: 1.5rem;">Aspirasi Publik</h2>
-        <div class="filters">
-            <button>Pendidikan</button>
-            <button>Kesehatan Mental</button>
-            <button>Fasilitas</button>
-            <button>Sosial & Budaya</button>
-            <button>Lingkungan</button>
-        </div>
 
-        <div class="card">
-            <h3>Perbaikan Fasilitas Toilet Kampus</h3>
-            <span>Kategori: Fasilitas – 2 Juli 2025</span>
-            <p>Beberapa toilet di gedung B lantai 3 mengalami kerusakan. Mohon ada perbaikan dan perhatian dari pihak kampus agar mahasiswa nyaman.</p>
-        </div>
+<header>
+  <h1>Suara & Karya</h1>
+  <p>Ruang Aspirasi dan Ekspresi Anak Muda</p>
+</header>
 
-        <div class="card">
-            <h3>Jadwal Konseling Mahasiswa Tidak Konsisten</h3>
-            <span>Kategori: Kesehatan Mental – 30 Juni 2025</span>
-            <p>Konseling penting untuk mahasiswa, tapi jadwal dan informasi kerap berubah. Harap ada sistem yang lebih jelas dan bisa diakses semua mahasiswa.</p>
-        </div>
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="aspirasi.html">Aspirasi</a>
+  <a href="karya.html">Karya</a>
+  <a href="unggah.html">Unggah</a>
+  <a href="tentang.html">Tentang</a>
+  <a href="faq.html">FAQ</a>
+</nav>
 
-        <div class="card">
-            <h3>Taman Kampus Kurang Terawat</h3>
-            <span>Kategori: Lingkungan – 28 Juni 2025</span>
-            <p>Taman menjadi tempat istirahat dan belajar outdoor. Akan lebih baik jika lebih sering dirawat dan dijaga kebersihannya.</p>
-        </div>
+<div class="container">
+  <h2 style="text-align:center;">Aspirasi Publik</h2>
+
+  <div class="filter-buttons">
+    <button onclick="filterCards('semua')">Semua</button>
+    <button onclick="filterCards('pendidikan')">Pendidikan</button>
+    <button onclick="filterCards('fasilitas')">Fasilitas</button>
+    <button onclick="filterCards('kesehatan')">Kesehatan Mental</button>
+    <button onclick="filterCards('sosial')">Sosial</button>
+  </div>
+
+  <div class="card-grid" id="aspirasiContainer">
+    <div class="card" data-kategori="pendidikan">
+      <h3>Kurangnya Akses Internet di Kampus</h3>
+      <small>Pendidikan • 12 Mei 2025</small>
+      <p>Akses Wi-Fi di beberapa area kampus masih lemah, menyulitkan proses belajar online dan tugas daring.</p>
     </div>
-    <footer>
-        &copy; 2025 Suara & Karya. All rights reserved.
-    </footer>
+    <div class="card" data-kategori="fasilitas">
+      <h3>Kamar Mandi Umum Tidak Layak</h3>
+      <small>Fasilitas • 10 Mei 2025</small>
+      <p>Kondisi toilet di gedung B sangat buruk. Perlu perbaikan agar lebih bersih dan aman digunakan mahasiswa.</p>
+    </div>
+    <div class="card" data-kategori="kesehatan">
+      <h3>Dukungan Kesehatan Mental Masih Kurang</h3>
+      <small>Kesehatan Mental • 8 Mei 2025</small>
+      <p>Banyak mahasiswa mengalami stres akademik, namun layanan konseling kampus belum cukup aktif merespons.</p>
+    </div>
+    <div class="card" data-kategori="sosial">
+      <h3>Kurangnya Kegiatan Inklusif untuk Mahasiswa Disabilitas</h3>
+      <small>Sosial • 5 Mei 2025</small>
+      <p>Kampus belum menyediakan cukup program atau fasilitas untuk mahasiswa berkebutuhan khusus.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Suara & Karya. Suara kecil bisa berdampak besar.</p>
+</footer>
+
+<script>
+function filterCards(kategori) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    const cardKategori = card.getAttribute("data-kategori");
+    if (kategori === 'semua' || cardKategori === kategori) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
 </body>
 </html>
