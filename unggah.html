@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unggah Aspirasi/Karya | Suara & Karya</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f3f3f3;
+    }
+    header {
+      background-color: #003566;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    nav {
+      background-color: #00264d;
+      text-align: center;
+      padding: 0.6rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    h2 {
+      text-align: center;
+      color: #003566;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .toggle-section {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .toggle-section button {
+      margin: 0.3rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #ffc300;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .form-section {
+      display: none;
+    }
+    .form-section.active {
+      display: block;
+    }
+    .submit-btn {
+      background-color: #003566;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #00264d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Suara & Karya</h1>
+  <p>Unggah Aspirasi atau Karya Kreatifmu</p>
+</header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="aspirasi.html">Aspirasi</a>
+  <a href="karya.html">Karya</a>
+  <a href="unggah.html">Unggah</a>
+  <a href="tentang.html">Tentang</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<div class="container">
+  <h2>Formulir Unggah</h2>
+
+  <div class="toggle-section">
+    <button onclick="showForm('aspirasi')">Aspirasi</button>
+    <button onclick="showForm('karya')">Karya</button>
+  </div>
+
+  <!-- Form Aspirasi -->
+  <form id="form-aspirasi" class="form-section active">
+    <label for="nama1">Nama (Opsional):</label>
+    <input type="text" id="nama1" placeholder="Misal: Dina">
+
+    <label for="kategori1">Kategori:</label>
+    <select id="kategori1">
+      <option>Pendidikan</option>
+      <option>Fasilitas</option>
+      <option>Kesehatan Mental</option>
+      <option>Sosial</option>
+      <option>Lingkungan</option>
+    </select>
+
+    <label for="judul1">Judul Aspirasi:</label>
+    <input type="text" id="judul1" placeholder="Contoh: Kesejahteraan Mahasiswa Perlu Diperhatikan">
+
+    <label for="isi1">Isi Aspirasi:</label>
+    <textarea id="isi1" rows="5" placeholder="Tuliskan aspirasi, keluhan, atau harapanmu..."></textarea>
+
+    <button type="button" class="submit-btn">Kirim Aspirasi</button>
+  </form>
+
+  <!-- Form Karya -->
+  <form id="form-karya" class="form-section">
+    <label for="nama2">Nama Kreator:</label>
+    <input type="text" id="nama2" placeholder="Misal: Reza">
+
+    <label for="jenis2">Jenis Karya:</label>
+    <select id="jenis2">
+      <option>Puisi</option>
+      <option>Musik</option>
+      <option>Poster</option>
+      <option>Coding</option>
+      <option>Video</option>
+    </select>
+
+    <label for="judul2">Judul Karya:</label>
+    <input type="text" id="judul2" placeholder="Contoh: Melodi Rindu">
+
+    <label for="deskripsi2">Deskripsi Karya:</label>
+    <textarea id="deskripsi2" rows="5" placeholder="Deskripsikan singkat tentang karyamu..."></textarea>
+
+    <button type="button" class="submit-btn">Unggah Karya</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Suara & Karya. Bersuaralah. Berkaryalah. Berubah.</p>
+</footer>
+
+<script>
+function showForm(formType) {
+  const aspirasiForm = document.getElementById("form-aspirasi");
+  const karyaForm = document.getElementById("form-karya");
+
+  if (formType === "aspirasi") {
+    aspirasiForm.classList.add("active");
+    karyaForm.classList.remove("active");
+  } else {
+    karyaForm.classList.add("active");
+    aspirasiForm.classList.remove("active");
+  }
+}
+</script>
+
+</body>
+</html>
 
